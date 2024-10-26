@@ -7,13 +7,13 @@ namespace game
     {
         public BeforeSceneRenderComponent(Game game) : base(game)
         {
-            DrawOrder = (int)DrawOrders.BeforeSceneRender;
+            DrawOrder = (int)DrawOrders.BEFORE_SCENE_RENDER;
         }
 
         public override void Draw(GameTime gameTime)
         {
             base.Draw(gameTime);
-            G.SpriteBatch.Begin(samplerState: SamplerState.PointWrap);
+            Global.SpriteBatch.Begin(samplerState: SamplerState.PointWrap);
         }
     }
 }

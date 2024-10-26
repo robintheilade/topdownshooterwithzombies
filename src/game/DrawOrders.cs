@@ -2,9 +2,9 @@ namespace game
 {
     public enum DrawOrders
     {
-        ClearGraphicsDevice = 0,
-        BeforeSceneRender = 1_000,
-        RenderCharacterTest = 5_000,
-        AfterSceneRender = 10_000,
+        CLEAR_GRAPHICS_DEVICE = 0,
+        BEFORE_SCENE_RENDER = 1_000,
+        RENDER_CHARACTER_TEST = 5_000,
+        AFTER_SCENE_RENDER = 10_000,
     }
 }

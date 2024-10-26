@@ -12,8 +12,8 @@ namespace game
         public override void Initialize()
         {
             base.Initialize();
-            G.GraphicsDevice = Game.GraphicsDevice;
-            G.SpriteBatch = new SpriteBatch(G.GraphicsDevice);
+            Global.GraphicsDevice = Game.GraphicsDevice;
+            Global.SpriteBatch = new SpriteBatch(Global.GraphicsDevice);
         }
     }
 }

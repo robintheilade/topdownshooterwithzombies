@@ -6,13 +6,13 @@ namespace game
     {
         public ClearGraphicsDeviceComponent(Game game) : base(game)
         {
-            DrawOrder = (int)DrawOrders.ClearGraphicsDevice;
+            DrawOrder = (int)DrawOrders.CLEAR_GRAPHICS_DEVICE;
         }
 
         public override void Draw(GameTime gameTime)
         {
             base.Draw(gameTime);
-            G.GraphicsDevice.Clear(Color.CornflowerBlue);
+            Global.GraphicsDevice.Clear(Color.CornflowerBlue);
         }
     }
 }

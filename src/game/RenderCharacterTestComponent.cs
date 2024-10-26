@@ -5,23 +5,28 @@ namespace game
 {
     public class RenderCharacterTestComponent : DrawableGameComponent
     {
-        private Texture2D texture;
+        private Texture2D spriteSheet;
+
+        private Entity entity;
+        private Sprite sprite;
 
         public RenderCharacterTestComponent(Game game) : base(game)
         {
-            DrawOrder = (int)DrawOrders.RenderCharacterTest;
+            DrawOrder = (int)DrawOrders.RENDER_CHARACTER_TEST;
         }
 
         public override void Initialize()
         {
             base.Initialize();
-            texture = Game.Content.Load<Texture2D>("gfx/spritesheet_characters");
+            spriteSheet = Game.Content.Load<Texture2D>("gfx/spritesheet_characters");
+            sprite = new(spriteSheet, 0, 0, 58, 44);
+            entity = new(Game, sprite);
         }
 
         public override void Draw(GameTime gameTime)
         {
             base.Draw(gameTime);
-            G.SpriteBatch.Draw(texture, G.GraphicsDevice.Viewport.Bounds.Size.ToVector2() / 2, new Rectangle(164, 88, 49, 43), Color.White);
+            entity.Draw(gameTime);
         }
     }
 }

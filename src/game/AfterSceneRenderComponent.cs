@@ -6,13 +6,13 @@ namespace game
     {
         public AfterSceneRenderComponent(Game game) : base(game)
         {
-            DrawOrder = (int)DrawOrders.AfterSceneRender;
+            DrawOrder = (int)DrawOrders.AFTER_SCENE_RENDER;
         }
 
         public override void Draw(GameTime gameTime)
         {
             base.Draw(gameTime);
-            G.SpriteBatch.End();
+            Global.SpriteBatch.End();
         }
     }
 }
